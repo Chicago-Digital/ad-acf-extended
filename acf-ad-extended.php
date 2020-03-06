@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields: Antenna Digital Extended
 Plugin URI: PLUGIN_URL
 Description: Antenna Digital ACF Extended Plugin
-Version: 1.0.0
+Version: 1.0.1
 Author: Antenna | Digital
 Author URI: https://wwww.antennagroup.com
 License: GPLv2 or later
