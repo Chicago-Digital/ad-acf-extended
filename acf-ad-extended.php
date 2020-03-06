@@ -21,7 +21,7 @@ if( !class_exists('AD_ACF_extended') ) :
 include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
 $updater = new AD_Updater( __FILE__ );
 $updater->set_username( 'Chicago-Digital' );
-$updater->set_repository( 'ad-acf-extened' );
+$updater->set_repository( 'ad-acf-extended' );
 $updater->authorize( 'a30362a0928b1aaee6caf00f9cc4bf4fce26b100' );
 $updater->initialize();
 
