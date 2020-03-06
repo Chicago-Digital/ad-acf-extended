@@ -55,6 +55,8 @@ class AD_Updater {
 
 	        $response = json_decode( wp_remote_retrieve_body( wp_remote_get( $request_uri ) ), true ); // Get JSON and parse it
 
+          error_log( print_r( $response, true ));
+
 	        if( is_array( $response ) ) { // If it is an array
 	            $response = current( $response ); // Get the first item
 	        }
