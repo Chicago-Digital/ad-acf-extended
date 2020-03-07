@@ -16,10 +16,6 @@ class AD_ACF_acf_field_NAV_MENU extends acf_field {
 	*
 	*  This function will setup the field type data
 	*
-	*  @type	function
-	*  @date	5/03/2014
-	*  @since	5.0.0
-	*
 	*  @param	n/a
 	*  @return	n/a
 	*/
@@ -54,7 +50,6 @@ class AD_ACF_acf_field_NAV_MENU extends acf_field {
 		$this->defaults = array(
 			'save_format' => 'id',
 			'allow_null'  => 0,
-			'container'   => 'div',
 		);
 
 
@@ -86,10 +81,6 @@ class AD_ACF_acf_field_NAV_MENU extends acf_field {
 	*
 	*  Create extra settings for your field. These are visible when editing a field
 	*
-	*  @type	action
-	*  @since	3.6
-	*  @date	23/01/13
-	*
 	*  @param	$field (array) the $field being edited
 	*  @return	n/a
 	*/
@@ -117,19 +108,9 @@ class AD_ACF_acf_field_NAV_MENU extends acf_field {
         'name'         => 'save_format',
         'layout'       => 'horizontal',
         'choices'      => array(
+						'id'     => __('Nav Menu ID'),
             'object' => __('Nav Menu Object'),
-            'menu'   => __('Nav Menu HTML'),
-            'id'     => __('Nav Menu ID'),
         ),
-    ));
-
-    // Register the Menu Container setting
-    acf_render_field_setting($field, array(
-        'label'        => __('Menu Container'),
-        'instructions' => __("What to wrap the Menu's ul with (when returning HTML only)"),
-        'type'         => 'select',
-        'name'         => 'container',
-        'choices'      => $this->get_allowed_nav_container_tags(),
     ));
 
     // Register the Allow Null setting
@@ -146,36 +127,12 @@ class AD_ACF_acf_field_NAV_MENU extends acf_field {
 
 	}
 
-	/**
-     * Get the allowed wrapper tags for use with wp_nav_menu().
-     *
-     * @return array An array of allowed wrapper tags.
-     */
-    private function get_allowed_nav_container_tags() {
-        $tags           = apply_filters('wp_nav_menu_container_allowedtags', array( 'div', 'nav' ));
-        $formatted_tags = array(
-            '0' => 'None',
-        );
-
-        foreach ($tags as $tag) {
-            $formatted_tags[$tag] = ucfirst($tag);
-        }
-
-        return $formatted_tags;
-    }
-
-
-
 	/*
 		*  render_field()
 		*
 		*  Create the HTML interface for your field
 		*
 		*  @param	$field (array) the $field being rendered
-		*
-		*  @type	action
-		*  @since	3.6
-		*  @date	23/01/13
 		*
 		* Renders the Nav Menu Field.
 		*
@@ -233,10 +190,6 @@ class AD_ACF_acf_field_NAV_MENU extends acf_field {
 			*
 			*  This filter is appied to the $value after it is loaded from the db and before it is returned to the template
 			*
-			*  @type	filter
-			*  @since	3.6
-			*  @date	23/01/13
-			*
 			* Renders the Nav Menu Field.
 			*
 			* @param int   $value   The Nav Menu ID selected for this Nav Menu Field.
@@ -268,15 +221,6 @@ class AD_ACF_acf_field_NAV_MENU extends acf_field {
             $menu_object->count = $wp_menu_object->count;
 
             return $menu_object;
-        } elseif ('menu' == $field['save_format']) {
-            ob_start();
-
-            wp_nav_menu(array(
-                'menu' => $value,
-                'container' => $field['container']
-            ));
-
-            return ob_get_clean();
         }
 
         // Just return the Nav Menu ID

@@ -16,10 +16,6 @@ class AD_ACF_acf_field_LINK_EXTENDED extends acf_field {
 	*
 	*  This function will setup the field type data
 	*
-	*  @type	function
-	*  @date	5/03/2014
-	*  @since	5.0.0
-	*
 	*  @param	n/a
 	*  @return	n/a
 	*/
@@ -85,9 +81,6 @@ class AD_ACF_acf_field_LINK_EXTENDED extends acf_field {
 	*
 	*  description
 	*
-	*  @type	function
-	*  @since	1.0.0
-	*
 	*  @param	$post_id (int)
 	*  @return	$post_id (int)
 	*/
@@ -131,10 +124,6 @@ class AD_ACF_acf_field_LINK_EXTENDED extends acf_field {
 	*  render_field_settings()
 	*
 	*  Create extra settings for your field. These are visible when editing a field
-	*
-	*  @type	action
-	*  @since	3.6
-	*  @date	23/01/13
 	*
 	*  @param	$field (array) the $field being edited
 	*  @return	n/a
@@ -193,10 +182,6 @@ class AD_ACF_acf_field_LINK_EXTENDED extends acf_field {
 	*  Create the HTML interface for your field
 	*
 	*  @param	$field (array) the $field being rendered
-	*
-	*  @type	action
-	*  @since	3.6
-	*  @date	23/01/13
 	*
 	*  @param	$field (array) the $field being edited
 	*  @return	n/a
@@ -263,10 +248,6 @@ class AD_ACF_acf_field_LINK_EXTENDED extends acf_field {
 	*
 	*  This filter is appied to the $value after it is loaded from the db and before it is returned to the template
 	*
-	*  @type	filter
-	*  @since	3.6
-	*  @date	23/01/13
-	*
 	*  @param	$value (mixed) the value which was loaded from the database
 	*  @param	$post_id (mixed) the $post_id from which the value was loaded
 	*  @param	$field (array) the field array holding all the field options
@@ -296,10 +277,6 @@ class AD_ACF_acf_field_LINK_EXTENDED extends acf_field {
 	*  All values are validated regardless of the field's required setting. This allows you to validate and return
 	*  messages to the user if the value is not correct
 	*
-	*  @type	filter
-	*  @date	11/02/2014
-	*  @since	5.0.0
-	*
 	*  @param	$valid (boolean) validation status based on the value and the field's required setting
 	*  @param	$value (mixed) the $_POST value
 	*  @param	$field (array) the field array holding all the field options
@@ -309,8 +286,6 @@ class AD_ACF_acf_field_LINK_EXTENDED extends acf_field {
 	*  @param	$post_id (int)
 	*  @return	$post_id (int)
 	*/
-
-
 
 	function validate_value( $valid, $value, $field, $input ){
 
@@ -327,15 +302,10 @@ class AD_ACF_acf_field_LINK_EXTENDED extends acf_field {
 
 	}
 
-
 	/*
 	*  update_value()
 	*
 	*  This filter is applied to the $value before it is saved in the db
-	*
-	*  @type	filter
-	*  @since	3.6
-	*  @date	23/01/13
 	*
 	*  @param	$value (mixed) the value found in the database
 	*  @param	$post_id (mixed) the $post_id from which the value was loaded
@@ -355,7 +325,6 @@ class AD_ACF_acf_field_LINK_EXTENDED extends acf_field {
 
 	}
 
-
 	function input_admin_enqueue_scripts() {
 
 		// vars
@@ -371,7 +340,6 @@ class AD_ACF_acf_field_LINK_EXTENDED extends acf_field {
 		wp_enqueue_style('ad-acf-extended');
 
 	}
-
 
 }
 

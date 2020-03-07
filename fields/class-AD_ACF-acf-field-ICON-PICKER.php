@@ -16,10 +16,6 @@ class AD_ACF_acf_field_ICON_PICKER extends acf_field {
 	*
 	*  This function will setup the field type data
 	*
-	*  @type	function
-	*  @date	5/03/2014
-	*  @since	5.0.0
-	*
 	*  @param	n/a
 	*  @return	n/a
 	*/
@@ -82,10 +78,6 @@ class AD_ACF_acf_field_ICON_PICKER extends acf_field {
 	*
 	*  Create extra settings for your field. These are visible when editing a field
 	*
-	*  @type	action
-	*  @since	3.6
-	*  @date	23/01/13
-	*
 	*  @param	$field (array) the $field being edited
 	*  @return	n/a
 	*/
@@ -102,16 +94,6 @@ class AD_ACF_acf_field_ICON_PICKER extends acf_field {
 		*  Please note that you must also have a matching $defaults value for the field name (font_size)
 		*/
 
-		/*
-		acf_render_field_setting( $field, array(
-			'label'			=> __('Font Size','ad-acf-extended'),
-			'instructions'	=> __('Customise the input font size','ad-acf-extended'),
-			'type'			=> 'number',
-			'name'			=> 'font_size',
-			'prepend'		=> 'px',
-		));
-		*/
-
 	}
 
 
@@ -122,10 +104,6 @@ class AD_ACF_acf_field_ICON_PICKER extends acf_field {
 	*  Create the HTML interface for your field
 	*
 	*  @param	$field (array) the $field being rendered
-	*
-	*  @type	action
-	*  @since	3.6
-	*  @date	23/01/13
 	*
 	*  @param	$field (array) the $field being edited
 	*  @return	n/a
@@ -149,10 +127,6 @@ class AD_ACF_acf_field_ICON_PICKER extends acf_field {
 	*  format_value()
 	*
 	*  This filter is appied to the $value after it is loaded from the db and before it is returned to the template
-	*
-	*  @type	filter
-	*  @since	3.6
-	*  @date	23/01/13
 	*
 	*  @param	$value (mixed) the value which was loaded from the database
 	*  @param	$post_id (mixed) the $post_id from which the value was loaded
@@ -178,10 +152,6 @@ class AD_ACF_acf_field_ICON_PICKER extends acf_field {
 	*  update_value()
 	*
 	*  This filter is applied to the $value before it is saved in the db
-	*
-	*  @type	filter
-	*  @since	3.6
-	*  @date	23/01/13
 	*
 	*  @param	$value (mixed) the value found in the database
 	*  @param	$post_id (mixed) the $post_id from which the value was loaded
