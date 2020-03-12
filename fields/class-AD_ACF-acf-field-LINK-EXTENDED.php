@@ -316,7 +316,7 @@ class AD_ACF_acf_field_LINK_EXTENDED extends acf_field {
 	function update_value( $value, $post_id, $field ) {
 
 		// Check if value is an empty array and convert to empty string.
-		if( empty($value) ) {
+		if( empty($value) || empty($value['url']) ) {
 			$value = "";
 		}
 
