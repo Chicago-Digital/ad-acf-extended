@@ -229,7 +229,7 @@ class AD_ACF_acf_field_LINK_EXTENDED extends acf_field {
 				<span class="link-title"><?php echo esc_html($link['title']); ?></span>
 				<a class="link-url" href="<?php echo esc_url($link['url']); ?>" target="_blank"><?php echo esc_html($link['url']); ?></a>
 				<?php if ($has_choices) : ?>
-				<span class="link-type"><?php echo esc_html($field['choices'][$link['class']]); ?></span>
+				<span class="link-type"><?php if (!empty($link['class'])) : echo esc_html($field['choices'][$link['class']]); endif; ?></span>
 				<?php else : ?>
 				<span class="link-class"><?php echo esc_html($link['class']); ?></span>
 				<?php endif; ?>
