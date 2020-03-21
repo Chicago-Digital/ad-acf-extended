@@ -7,6 +7,7 @@
 .select2-container--default .select2-selection--single .select2-selection__arrow {height: 40px!important; width: 28px!important;}
 .select2-container--default .select2-selection--single .select2-selection__arrow b {background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E'); background-size: 85%; background-repeat: no-repeat; background-position: center center; border: none; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; top: 50%; left: 50%; display: block;}
 .select2-container--default .select2-selection--single .select2-selection__clear {margin-right: 10px;}
+.select2-container {width: 100%!important}
 /* Custom Icon Picker */
 .picker-icon {display: block; height: 32px; line-height: 32px;}
 .picker-icon__icon, .picker-icon__label {display: inline-block; vertical-align: middle;}
