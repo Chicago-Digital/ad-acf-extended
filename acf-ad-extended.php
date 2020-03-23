@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields: Antenna Digital Extended
 Plugin URI: https://wwww.antennagroup.com
 Description: Antenna Digital ACF Extended Plugin
-Version: 1.0.7
+Version: 1.0.8
 Author: Antenna Digital
 Author URI: https://wwww.antennagroup.com
 License: GPLv2 or later
@@ -19,10 +19,9 @@ if( ! defined( 'ABSPATH' ) ) exit;
 if( !class_exists('AD_ACF_extended') ) :
 
 include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
-$updater = new AD_Updater( __FILE__ );
+$updater = new AD_ACF_Updater( __FILE__ );
 $updater->set_username( 'Chicago-Digital' );
 $updater->set_repository( 'ad-acf-extended' );
-$updater->authorize( 'a30362a0928b1aaee6caf00f9cc4bf4fce26b100' );
 $updater->initialize();
 
 class AD_ACF_extended {
@@ -45,7 +44,7 @@ class AD_ACF_extended {
 		// settings
 		// - these will be passed into the field class.
 		$this->settings = array(
-			'version'	=> '1.0.7',
+			'version'	=> '1.0.8',
 			'url'		=> plugin_dir_url( __FILE__ ),
 			'path'		=> plugin_dir_path( __FILE__ )
 		);

@@ -1,6 +1,6 @@
 <?php
 
-class AD_Updater {
+class AD_ACF_Updater {
 
 	private $file;
 
@@ -13,8 +13,6 @@ class AD_Updater {
 	private $username;
 
 	private $repository;
-
-	private $authorize_token;
 
 	private $github_response;
 
@@ -41,28 +39,14 @@ class AD_Updater {
 		$this->repository = $repository;
 	}
 
-	public function authorize( $token ) {
-		$this->authorize_token = $token;
-	}
-
 	private function get_repository_info() {
 	    if ( is_null( $this->github_response ) ) { // Do we have a response?
 	        $request_uri = sprintf( 'https://api.github.com/repos/%s/%s/releases', $this->username, $this->repository ); // Build URI
 
-	        if( $this->authorize_token ) { // Is there an access token?
-	            $request_uri = add_query_arg( 'access_token', $this->authorize_token, $request_uri ); // Append it
-	        }
-
 	        $response = json_decode( wp_remote_retrieve_body( wp_remote_get( $request_uri ) ), true ); // Get JSON and parse it
-
-          #error_log( print_r( $response, true ));
 
 	        if( is_array( $response ) ) { // If it is an array
 	            $response = current( $response ); // Get the first item
-	        }
-
-	        if( $this->authorize_token ) { // Is there an access token?
-	            $response['zipball_url'] = add_query_arg( 'access_token', $this->authorize_token, $response['zipball_url'] ); // Update our zip url with token
 	        }
 
 	        $this->github_response = $response; // Set it to our property
@@ -102,6 +86,7 @@ class AD_Updater {
 					);
 
 					$transient->response[$this->basename] = (object) $plugin; // Return it in response
+
 				}
 			}
 		}
@@ -121,12 +106,9 @@ class AD_Updater {
 				$plugin = array(
 					'name'				=> $this->plugin["Name"],
 					'slug'				=> $this->basename,
-					'requires'					=> '3.3',
-					'tested'						=> '4.4.1',
-					'rating'						=> '100.0',
-					'num_ratings'				=> '10823',
-					'downloaded'				=> '14249',
-					'added'							=> '2016-01-05',
+					'requires'					=> '5.0',
+					'tested'						=> '5.3.2',
+					'added'							=> '2020-03-22',
 					'version'			=> $this->github_response['tag_name'],
 					'author'			=> $this->plugin["AuthorName"],
 					'author_profile'	=> $this->plugin["AuthorURI"],
