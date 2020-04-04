@@ -2,11 +2,10 @@
 
 /*
 Plugin Name: Advanced Custom Fields: Antenna Digital Extended
-Plugin URI: https://wwww.antennagroup.com
-Description: Antenna Digital ACF Extended Plugin
+Plugin URI: https://www.antennagroup.com
 Version: 1.0.8
-Author: Antenna Digital
-Author URI: https://wwww.antennagroup.com
+Author: Antenna | Digital
+Author URI: https://www.antennagroup.com
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
