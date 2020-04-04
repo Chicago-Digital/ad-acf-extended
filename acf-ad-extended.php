@@ -3,9 +3,10 @@
 /*
 Plugin Name: Advanced Custom Fields: Antenna Digital Extended
 Plugin URI: https://www.antennagroup.com
-Version: 1.0.9
+Description: Extends ACF by adding three new fields. Icon Picker, Link (Extended), and Nav Menu Selector
+Version: 1.1.0
 Author: Antenna | Digital
-Author URI: https://www.antennagroup.com
+Author URI: https://wwww.antennagroup.com
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -43,7 +44,7 @@ class AD_ACF_extended {
 		// settings
 		// - these will be passed into the field class.
 		$this->settings = array(
-			'version'	=> '1.0.9',
+			'version'	=> '1.1.0',
 			'url'		=> plugin_dir_url( __FILE__ ),
 			'path'		=> plugin_dir_path( __FILE__ )
 		);
