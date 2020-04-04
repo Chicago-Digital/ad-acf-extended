@@ -3,7 +3,7 @@
 /*
 Plugin Name: Advanced Custom Fields: Antenna Digital Extended
 Plugin URI: https://www.antennagroup.com
-Version: 1.0.8
+Version: 1.0.9
 Author: Antenna | Digital
 Author URI: https://www.antennagroup.com
 License: GPLv2 or later
@@ -43,7 +43,7 @@ class AD_ACF_extended {
 		// settings
 		// - these will be passed into the field class.
 		$this->settings = array(
-			'version'	=> '1.0.8',
+			'version'	=> '1.0.9',
 			'url'		=> plugin_dir_url( __FILE__ ),
 			'path'		=> plugin_dir_path( __FILE__ )
 		);
